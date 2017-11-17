@@ -1,46 +1,36 @@
 package com.techknowera.erc.model;
-public class Transaction
-{
-    private Double ether;
 
-    private String fromAddress;
+public class Transaction {
+	private Double ether;
+	private String fromAddress;
+	private String toAddress;
 
-    private String toAddress;
+	public Double getEther() {
+		return ether;
+	}
 
-    public Double getEther ()
-    {
-        return ether;
-    }
+	public void setEther(Double ether) {
+		this.ether = ether;
+	}
 
-    public void setEther (Double ether)
-    {
-        this.ether = ether;
-    }
+	public String getFromAddress() {
+		return fromAddress;
+	}
 
-    public String getFromAddress ()
-    {
-        return fromAddress;
-    }
+	public void setFromAddress(String fromAddress) {
+		this.fromAddress = fromAddress;
+	}
 
-    public void setFromAddress (String fromAddress)
-    {
-        this.fromAddress = fromAddress;
-    }
+	public String getToAddress() {
+		return toAddress;
+	}
 
-    public String getToAddress ()
-    {
-        return toAddress;
-    }
+	public void setToAddress(String toAddress) {
+		this.toAddress = toAddress;
+	}
 
-    public void setToAddress (String toAddress)
-    {
-        this.toAddress = toAddress;
-    }
-
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [ether = "+ether+", fromAddress = "+fromAddress+", toAddress = "+toAddress+"]";
-    }
+	@Override
+	public String toString() {
+		return "ClassPojo [ether = " + ether + ", fromAddress = " + fromAddress + ", toAddress = " + toAddress + "]";
+	}
 }
-			
