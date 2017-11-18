@@ -13,6 +13,9 @@ public class ErcController {
 
 	@Autowired
 	MyMessage msg;
+	
+	@Autowired
+	ContractService contractService;
 
 	// to test the swagger open browser and type http://localhost:8080/swagger-ui.html
 	// to test the controller open browser and type http://localhost:8080/create/address
@@ -23,7 +26,10 @@ public class ErcController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/create/address")
-	public String createAddress() {
+	public String createAddress() throws Exception{
+		
+		contractService.createWeb3jObject();
+		
 		return "wallet  address: 0xdkajfwoeqirqewnv";
 	}
 
